@@ -1,0 +1,248 @@
+// Basic elements for My Beauty
+.b-clr {
+	clear: both;
+	font-size: 0;
+	.size(0,0);
+}
+
+.b-clone-formobile {
+	display: none;
+
+	@media only screen and (max-width: 999px) {
+		display: block;
+	}
+}
+
+// Structure
+	.b-wrap {
+		margin: 0 auto;
+		width: 1160px;
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+// end Structure
+
+// text elements
+	.b-hdr {
+		position: relative;
+		padding-bottom: 32px;
+		text-align: center;
+		line-height: 55px;
+		font-size: 36px;
+		color: @second-clr;
+		font-family: @b-exbold;
+
+		span {
+			display: block;
+			padding-top: 5px;
+			text-align: center;
+			line-height: 1.2;
+			font-family: @b-light;
+		}
+
+		a {
+			color: #0080A6;
+			display: inline;
+			text-decoration: none;
+			line-height: 1;
+			border-bottom: 1px dotted #0080A6;
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+
+		&.alt {
+            font-family: @b-light;
+
+            span {
+                display: inline;
+                font-size: inherit;
+                font-family: @b-exbold;
+            }
+        }
+
+		&:after {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			content: "";
+			width: 40px;
+			height: 3px;
+			margin-left: -20px;
+			background: #FF1E00;
+		}
+
+		.med-max(980,{
+			font-size: 30px;
+			line-height: 1.2!important;
+		});
+
+		.med-max(470,{
+			font-size: 24px;
+			line-height: 30px;
+		});
+	}
+
+	.b-dscr {
+		margin-top: 35px;
+		text-align: center;
+		font-size: 20px;
+		color: #1B2E46;
+
+		i {
+			font-size: 13px;
+			color: #1B2E46;
+		}
+	}
+
+	.b-blkhdr {
+		margin-top: 24px;
+		text-align: center;
+		font-family: @b-light;
+		font-size: 20px;
+	}
+
+	.b-basic-link {
+		
+	}
+// end text elements
+
+// Forms
+	.b-txtinp {
+		height: 46px;
+		font-size: 14px;
+		text-align: center;
+		color: @second-clr;
+		font-family: @b-sbold;
+		background-color: #FAFAFA;
+		.placeholder(#545C6B, 400);
+		border: 2px solid #E6EAEF;
+		border-radius: 3px;
+		.no-app();
+
+		&:focus {
+			border-color: #0080A6;
+		}
+	}
+
+	.b-checkbox-unit,
+	.b-radio-unit {
+		label {
+			font-size: 0;
+
+			.icon-check {
+				display: inline-block;
+				vertical-align: top;
+				.sq(18px);
+				margin-top: 1px;
+				margin-right: -18px;
+				text-align: center;
+				line-height: 18px;
+				color: #fff;
+				font-size: 0;
+				background-color: #fff;
+				border: 1px solid #EFEFEF;
+				border-radius: 3px;
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: top;
+				padding-left: 35px;
+				font-size: 18px;
+				color: @second-clr;
+				line-height: 20px;
+			}
+
+			&.checked {
+				i {
+					font-size: 9px;
+					color: @first-clr;
+				}
+			}
+		}
+
+		input {
+			display: none;
+		}
+	}
+
+	.b-select {
+		display: block;
+		margin-bottom: 30px;
+
+		.select2-container {
+			width: 100%!important;
+			margin: 0;
+
+			&.select2-container--open {
+				.select2-selection__rendered {
+					border-radius: 3px 3px 0 0;
+				}
+			}
+
+			.select2-selection {
+				height: auto;
+				border: none;
+			}
+
+			.select2-selection__rendered {
+				display: block;
+				padding: 0 22px;
+				line-height: 50px;
+				font-family: @b-light;
+				color: #000;
+				font-size: 16px;
+				border: 2px solid #E6EAEF;
+    			border-radius: 3px;
+
+    			.select2-selection__placeholder {
+    				display: block;
+					color: #697078;
+    			}
+			}
+
+			.select2-selection__arrow {
+			    top: 14px;
+			    right: 10px;
+			}
+
+			*:focus {
+				outline: none;
+			}
+		}
+
+		.select2-selection__placeholder {
+			font-size: 16px;
+		}
+	}
+// end Forms
+
+// Buttons 
+	.b-mainbtn {
+		max-width: 100%;
+		padding: 13px 20px;
+		font-family: @b-sbold;
+		line-height: 20px;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		cursor: pointer;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: 5px;
+		background: @first-clr;
+		.transition(all .3s ease);
+		border: none;
+
+		&:hover {
+			box-shadow: 0 0 25px @first-clr;
+		}
+
+		.med-max(520,{
+			font-size: 14px!important;
+		});
+	}
+// end Buttons 

@@ -1,0 +1,238 @@
+// Basic elements for My Beauty
+.b-clr {
+	clear: both;
+	font-size: 0;
+	.size(0,0);
+}
+
+.b-clone-formobile {
+	display: none;
+
+	@media only screen and (max-width: 999px) {
+		display: block;
+	}
+}
+
+// Structure
+	.b-wrap {
+		margin: 0 auto;
+		width: 1220px;
+		max-width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+// end Structure
+
+// text elements
+	.b-hdr {
+		padding: 30px 0;
+		color: #000;
+		font-size: 24px;
+
+		.med-max(920,{
+			padding: 0 0 10px;
+		});
+	}
+
+	.b-basic-link {
+		
+	}
+// end text elements
+
+// Forms
+	.b-txtinp {
+		height: 33px;
+		padding-left: 14px;
+		font-size: 18px;
+		color: #000;
+		font-family: @b-light;
+		padding-right: 10px;
+		.placeholder(@txt_clr, 400);
+		border: 1px solid #D5DDE1;
+		border-radius: 3px;
+		box-shadow: 0 3px 4px -2px rgba(0, 0, 0, .3);
+
+		.med-max(880,{
+			padding: 0 34px 0 10px;
+		});
+	}
+
+	textarea.b-txtinp {
+		height: 132px;
+		padding-top: 10px;
+		resize: none;
+	}
+
+	.b-checkbox-unit,
+	.b-radio-unit {
+		label {
+			font-size: 0;
+
+			i {
+				display: inline-block;
+				vertical-align: top;
+				.sq(16px);
+				text-align: center;
+				line-height: 16px;
+				color: #fff;
+				font-size: 0;
+				border: 1px solid #D5DDE1;
+			    border-radius: 3px;
+			    box-shadow: 0 3px 4px -2px rgba(0,0,0,.3);
+			}
+
+			span {
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				padding-left: 25px;
+				margin-left: -16px;
+				font-size: 18px;
+				color: #000;
+				line-height: 16px;
+			}
+
+			&.checked {
+				i {
+					font-size: 12px;
+					color: @main_clr;
+				}
+			}
+		}
+
+		input {
+			display: none;
+		}
+	}
+
+	.b-select-inp {
+		position: relative;
+		width: 100%;
+
+		.select2-container--default {
+			position: relative;
+			z-index: 1;
+			width: 100%!important;
+			max-width: 100%;
+
+			&.select2-container--open {
+				.select2-selection__arrow {
+					background: @main_clr;
+
+					&:after {
+						color: #fff;
+						.rotate(180deg);
+					}
+				}
+			}
+
+			.select2-selection--single {
+				height: auto;
+				border-radius: 0;
+				border: 1px solid #D5DDE1;
+			    border-radius: 3px;
+			    box-shadow: 0 3px 4px -2px rgba(0,0,0,.3);
+
+				.select2-selection__rendered {
+					padding: 0 34px 0 14px;
+					font-size: 18px;
+					color: #000;
+					font-family: @b-light;
+					line-height: 32px;
+				}
+			}
+
+			.select2-selection__arrow {
+				width: 38px;
+				height: auto;
+				line-height: 32px;
+				text-align: center;
+
+				b {
+					display: none;
+				}
+
+				&:after {
+					content: "\e904";
+					font-family: 'icomoon';
+					color: #BCC3C9;
+					font-size: 6px;
+				}
+			}
+
+			* {
+				&:focus {
+					outline: none;
+				}
+			}
+		}
+
+		select {
+			width: 100%;
+			padding: 0 34px 0 14px;
+			font-size: 18px;
+			color: #000;
+			font-family: @b-light;
+			line-height: 32px;
+			border: 1px solid #D5DDE1;
+		    border-radius: 3px;
+		    background-color: transparent;
+		    box-shadow: 0 3px 4px -2px rgba(0,0,0,.3);
+		    .no-app();
+		}
+
+		&:after {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 38px;
+			line-height: 32px;
+			text-align: center;
+			content: "\e904";
+			font-family: 'icomoon';
+			color: #BCC3C9;
+			font-size: 6px;
+		}
+
+		.med-max(880,{
+			select,
+			.select2-container--default .select2-selection--single .select2-selection__rendered {
+				padding: 0 34px 0 10px;
+			}
+		});
+	}
+// end Forms
+
+// Buttons 
+	.b-mainbtn {
+		display: inline-block;
+		padding: 0 35px;
+		color: #fff;		
+		cursor: pointer;
+		text-transform: uppercase;
+		text-decoration: none;
+		line-height: 38px;
+		font-size: 16px;
+		border-radius: 4px;
+		background: @main_clr;
+		border: none;
+		box-shadow: 0 4px 4px -2px rgba(0, 0, 0, .3);
+
+		&:hover {
+			background: @main_clr + #111;
+		}
+
+		&.alt {
+			padding: 0 12px;
+			color: #7A858D;
+			font-size: 14px;
+			text-transform: none;
+			background-color: #EBF1F4;
+			box-shadow: none;
+
+			&:hover {
+				background-color: #EBF1F4 + #111;
+			}
+		}
+	}
+// end Buttons 

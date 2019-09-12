@@ -1,0 +1,73 @@
+// Variables
+@first-clr: #FF4106;
+@link-clr: #0080A6;
+@second-clr: #1B2E46;
+@sprite-dir: '../img/sprite.png';
+@sprite-dir-2x: '../img/sprite-2x.png';
+@sprite-width: 547px;
+@sprite-height: 389px;
+// end Variables
+
+// Fonts
+@basic-font: 'Proxima Nova Rg';
+@b-exbold: 'Proxima Nova Th';
+@b-sbold: 'Proxima Nova Lt';
+@b-light: 'ProximaNovaLight';
+@import url(../fonts/icomoon/style.css);
+// end Fonts
+
+@import "mixins";
+@import "resets";
+@import "plugins";
+@import "font-faces";
+@import "basic";
+@import "modules";
+@import "pages";
+@import "icons";
+
+body {
+	padding-top: 115px;
+	min-width: 320px;
+	font-family: @basic-font;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+	-webkit-text-size-adjust: 100%;
+	overflow-x: hidden;
+	background: url(../img/last-scr.jpg) bottom center no-repeat #fff;
+
+	&.popup-shows {
+		overflow: hidden;
+		padding-right: 17px;
+	}
+
+	.med-max(1130,{
+		padding-top: 97px;
+	});
+
+	.med-max(970,{
+		padding-top: 78px;
+	});
+}
+
+/* Разбивка по префиксам:
+ 	b- - basic.less;
+ 	m- - modules.less;
+ 	p- - pages.less.
+------------------------------------
+* Префикс имеет только первый селектор из цепочки (последний родитель логического элемента).
+* Все последющие элементы, находящиеся внутри блока с селектором, относящиеся к нему, - не имеют префикса.
+* Блоки без префикса относятся к ближайшему родителю с префиксом или к сестринскому классу (в случае, если данный класс выступает в роли модификатора, если это так то он идет вторым, 3м в списке).
+------------------------------------
+Пример:
+<main class="b-page-contens b-wrap">
+	<div class="m-bread-crumbs">
+		<ul>
+			<li class="go-mainpage">Главная</li>
+		</ul>
+	</div>
+	<div class="contens-place">
+	</div>
+</main>
+К ".b-page-contens" - относится ".contens-place", те. искать его нужно в файле basic.less, внутри ".b-page-contens".
+".go-mainpage" нужно искать в modules.less, внутри ".m-bread-crumbs". */

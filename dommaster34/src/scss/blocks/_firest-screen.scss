@@ -1,0 +1,137 @@
+.firest-screen {
+  position: relative;
+  padding-top: 390px;
+  padding-bottom: 313px;
+  text-align: left;
+  background: url(../img/first-screen.jpg) center center no-repeat;
+
+  .b-wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__welcome {
+    display: block;
+    font-size: 50px;
+    color: $c-first-d;
+    line-height: 60px;
+    font-family: 'Candara', sans-serif;
+  }
+
+  &__order-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 40px 72px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background: $c-first;
+    border-radius: 5px;
+    border-bottom: 3px solid #3A2790;
+    transition: all .3s ease;
+
+    &:hover {
+      background: #716CE3;
+      border-color: #604BC7;
+    }
+  }
+
+  &__info-item {
+    position: absolute;
+
+    &:first-child {
+      top: 75px;
+      right: 13%;
+    }
+
+    &:nth-child(2) {
+      top: 223px;
+      right: 32%;
+    }
+  }
+
+  &__info-item-dot {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: $c-second;
+    border-radius: 50%;
+    border: 6px solid #7DD9B5;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  &__info-item-text {
+    position: absolute;
+    top: 14px;
+    left: -90px;
+    width: 208px;
+    padding: 27px 0;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all .3s ease;
+
+    &.active {
+      opacity: 1;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  @media only screen and(max-width: 1023px) {
+    padding: 230px 0 150px;
+
+    &__welcome {
+      font-size: 36px;
+      line-height: 1.2;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background: rgba(255,255,255,.75);
+    }
+
+    &__info-items {
+      display: none;
+    }
+  }
+
+  @media only screen and(max-width: 720px) {
+    padding: 270px 0 45px;
+    text-align: center;
+
+    &__welcome {
+      text-align: center;
+      font-size: 24px;
+      line-height: 1.2;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__order-btn {
+      padding: 20px 42px;
+    }
+  }
+}

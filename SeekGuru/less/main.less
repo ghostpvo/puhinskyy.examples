@@ -1,0 +1,59 @@
+// RadioRecord styleseet
+// Variables
+@main_clr: #3FB7C7;
+@txt_clr: #5C666B;
+@decor_clr: #BAC2C6;
+@sprite_dir: '../img/sprite.png';
+// end Variables
+
+// Fonts
+@basic-font: 'ProximaNovaRegular';
+@b-light: 'ProximaNovaLight';
+@b-bold: 'ProximaNovaBold';
+@import url(../fonts/icomoon/style.css);
+// end Fonts
+
+@import "mixins";
+@import "resets";
+@import "plugins";
+@import "font-faces";
+@import "basic";
+@import "pages";
+@import "modules";
+@import "icons";
+
+body {
+	min-width: 320px;
+	font-family: @basic-font;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+
+	&.popup-shows {
+		overflow: hidden;
+	}
+}
+
+/* Разбивка по префиксам:
+ 	b- - basic.less;
+ 	m- - modules.less;
+ 	p- - pages.less.
+------------------------------------
+* Префикс имеет только первый селектор из цепочки (последний родитель логического элемента).
+* Все последющие элементы, находящиеся внутри блока с селектором, относящиеся к нему, - не имеют префикса.
+* Блоки без префикса относятся к ближайшему родителю с префиксом или к сестринскому классу (в случае, если данный класс выступает в роли модификатора, если это так то он идет вторым, 3м в списке).
+------------------------------------
+Пример:
+<main class="b-page-contens b-wrap">
+	<div class="m-bread-crumbs">
+		<ul>
+			<li class="go-mainpage">Главная</li>
+		</ul>
+	</div>
+	<div class="contens-place">
+	</div>
+</main>
+К ".b-page-contens" - относится ".contens-place", те. искать его нужно в файле basic.less, внутри ".b-page-contens".
+".go-mainpage" нужно искать в modules.less, внутри ".m-bread-crumbs". */

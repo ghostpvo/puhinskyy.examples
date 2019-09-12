@@ -1,0 +1,67 @@
+.answer-to-questions {
+  padding: 60px 0 45px;
+  background: #FCF9FF;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__manager-side {
+    width: 400px;
+    text-align: center;
+  }
+
+  img {
+    margin-right: 15px;
+    -webkit-user-drag: none;
+  }
+
+  &__manager-name {
+    display: block;
+    margin: 12px 0 7px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  &__manager-dscr {
+    font-size: 18px;
+  }
+
+  &__form-side {
+
+  }
+
+  &__title {
+
+  }
+
+  &__form {
+    .input-field {
+      display: block;
+    }
+  }
+
+  &__btn {
+    width: 400px;
+  }
+
+  @media only screen and(max-width: 750px) {
+    &__manager-side {
+      display: none;
+    }
+
+    &__form-side {
+      width: 100%;
+
+      .input-field,
+      .button {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

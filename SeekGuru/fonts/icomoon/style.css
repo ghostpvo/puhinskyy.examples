@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?7iit77');
+  src:  url('fonts/icomoon.eot?7iit77#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7iit77') format('truetype'),
+    url('fonts/icomoon.woff?7iit77') format('woff'),
+    url('fonts/icomoon.svg?7iit77#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-like:before {
+  content: "\e90e";
+}
+.icon-edit:before {
+  content: "\e90f";
+}
+.icon-delete:before {
+  content: "\e910";
+}
+.icon-hamburger:before {
+  content: "\e90b";
+}
+.icon-settings:before {
+  content: "\e908";
+}
+.icon-caret-right:before {
+  content: "\e909";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
+.icon-check:before {
+  content: "\e907";
+}
+.icon-pinterest:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\e901";
+}
+.icon-user:before {
+  content: "\e902";
+}
+.icon-phone-call:before {
+  content: "\e903";
+}
+.icon-arrow-down:before {
+  content: "\e904";
+}
+.icon-magnifinder:before {
+  content: "\e905";
+}
+.icon-twitter:before {
+  content: "\e906";
+}
+

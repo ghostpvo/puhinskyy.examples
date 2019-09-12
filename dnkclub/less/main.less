@@ -1,0 +1,39 @@
+// Variables
+@main-clr: #FF2D66;
+@txt-clr: #37383C;
+@decor-clr: #7BBBFF;
+@sprite-dir: '../img/sprite.png';
+@sprite-dir-2x: '../img/sprite-2x.png';
+@sprite-width: 554px;
+@sprite-height: 380px;
+// end Variables
+
+// Fonts
+@basic-font: 'Open Sans';
+@b-bold: 'Open Sans Bold';
+@b-light: 'Open Sans Light';
+@b-decor: 'A.C.M.E';
+@import url(../fonts/icomoon/style.css);
+// end Fonts
+
+@import "mixins";
+@import "resets";
+@import "plugins";
+@import "font-faces";
+@import "basic";
+@import "modules";
+@import "icons";
+
+body {
+	min-width: 320px;
+	font-family: @basic-font;
+	background: #fff;
+	color: #000;
+	font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+
+	&.popup-shows {
+		overflow: hidden;
+	}
+}

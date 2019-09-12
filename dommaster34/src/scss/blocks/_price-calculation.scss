@@ -1,0 +1,30 @@
+.price-calculation {
+  padding-top: 150px;
+  padding-bottom: 125px;
+  background: url("../img/free-calculate.jpg") center center no-repeat #00A849;
+
+  &__title {
+    color: #fff;
+    text-align: left;
+  }
+
+  &__dscr {
+    max-width: 500px;
+    padding: 25px 0 45px;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  &__btn {
+    margin-top: 0;
+  }
+
+  @media only screen and(max-width: 999px) {
+    padding: 35px 0;
+    background-image: none;
+
+    &__dscr {
+      max-width: 100%;
+    }
+  }
+}

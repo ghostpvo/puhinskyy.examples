@@ -1,0 +1,70 @@
+// External plugins
+@import "plugins/jscrollpane";
+@import "plugins/select2";
+@import "plugins/fullcalendar";
+@import "plugins/jquery-ui";
+
+.custom-scroll {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.jspVerticalBar {
+		width: 3px;
+		background: transparent;
+	}
+
+	.jspTrack {
+		background: transparent;
+
+		.jspDrag {
+			background: #C4CCD0;
+		}
+	}
+}
+
+.select2-dropdown {
+	border-color: #D2D2D2;
+	border-radius: 0;
+
+	.select2-results__option {
+		font-size: 14px;
+
+		&.select2-results__option--highlighted {
+			background: @main_clr;
+		}
+	}
+}
+
+.b-datapicker {
+	position: relative;
+	width: 185px;
+
+	input {
+		position: relative;
+		z-index: 1;
+		padding-left: 12px;
+		padding-right: 30px;
+		width: 100%;
+		color: #7A858D;
+		font-size: 16px;
+		background-color: transparent;
+	}
+
+	&:after {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		width: 30px;
+		line-height: 34px;
+		text-align: center;
+		font-size: 5px;
+		content: "\e904";
+		font-family: 'icomoon';
+		color: #AFB7BE;
+	}
+
+	.med-max(490,{
+		width: 140px;
+	});
+}

@@ -1,0 +1,214 @@
+.select-foundation {
+  padding-bottom: 110px;
+  background: #FCF9FF;
+
+  &__wrap {
+    position: relative;
+    padding: 74px 0 51px;
+    border: 1px solid #DAD7DC;
+
+    &:before {
+      position: absolute;
+      left: 50%;
+      top: -36px;
+      width: 72px;
+      height: 72px;
+      margin-left: -36px;
+      border: 1px solid #DAD7DC;
+      content: "";
+      border-radius: 50%;
+      background: #FCF9FF;
+      @include svg(-173px,0);
+    }
+  }
+
+  &__title {}
+
+  &__selectors {
+    display: flex;
+    justify-content: space-between;
+    width: 717px;
+    margin: 0 auto;
+    padding-top: 45px;
+  }
+
+  &__selector {
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 800;
+    color: $c-first-d;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &--active {
+      color: $c-first;
+      cursor: default;
+    }
+  }
+
+  &__contens {
+    display: flex;
+    justify-content: space-between;
+    width: 825px;
+    margin: 0 auto;
+    padding-top: 45px;
+  }
+
+  &__pic-wrap {
+    width: 332px;
+    text-align: center;
+  }
+
+  &__picture {}
+  &__info {}
+
+  &__dscr {
+    max-width: 420px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &__price {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 412px;
+    padding-top: 12px;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 8px;
+      content: "";
+      border-bottom: 2px dotted $c-first;
+    }
+  }
+
+  &__price-from {
+    position: relative;
+    z-index: 1;
+    padding-right: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    background: #FCF9FF;
+  }
+
+  &__price-amount {
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    font-family: 'Candara', sans-serif;
+    font-size: 36px;
+    background: #FCF9FF;
+  }
+
+  &__actions {
+    margin-top: 30px;
+  }
+
+  &__order {
+    vertical-align: middle;
+    padding: 26px 75px;
+    margin-top: 0;
+    margin-right: 35px;
+  }
+
+  &__details-wrap {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    &.active {
+      .house-types-additional__data {
+        top: auto;
+        bottom: 79px;
+        right: 3px;
+        z-index: 2;
+        display: block;
+
+        &:before {
+          top: auto;
+          bottom: -46px;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__details {
+    font-size: 18px;
+    color: $c-first;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: underline;
+  }
+
+  @media only screen and(max-width: 1215px) {
+    width: auto;
+    margin: 0 10px;
+  }
+
+  @media only screen and(max-width: 940px) {
+    &__contens {
+      display: block;
+      max-width: calc(100% - 20px);
+    }
+
+    &__pic-wrap {
+      width: 100%;
+    }
+
+    &__info {
+      padding-top: 45px;
+      text-align: center;
+    }
+
+    &__dscr,
+    &__price {
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and(max-width: 767px) {
+    &__order {
+      margin-right: 0;
+    }
+
+    &__details {
+      display: none;
+    }
+  }
+
+  @media only screen and(max-width: 728px) {
+    &__selectors {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__selector {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    &__price-amount {
+      font-size: 26px;
+    }
+
+    &__order {
+      padding: 16px 35px;
+    }
+  }
+
+  @media only screen and(max-width: 430px) {
+    &__order {
+      margin-right: 15px;
+    }
+
+    &__details {
+      font-size: 15px;
+    }
+  }
+}
