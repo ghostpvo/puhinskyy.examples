@@ -1,0 +1,23 @@
+// Breakpoints for global media queries
+$break-m:         475px;
+$break-t:         747px;
+$break-d:         1003px;
+
+// Mixins for Media queries
+@mixin r-min($screen) {
+  @media only screen and (min-width: $screen) {
+    @content;
+  }
+}
+
+@mixin r-max($screen) {
+  @media only screen and (max-width: $screen) {
+    @content;
+  }
+}
+
+@mixin r-min-max($from, $to) {
+  @media only screen and (min-width: $from) and (max-width: $to) {
+    @content;
+  }
+}

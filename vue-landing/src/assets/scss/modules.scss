@@ -1,0 +1,43 @@
+.block-wrap {
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  @include r-max($break-m) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.block-title {
+  @include font(h-second, 400, $font-second);
+  color: $dark-clr;
+  letter-spacing: 2px;
+}
+
+.main-btn {
+  display: inline-block;
+  padding: 13px 41px;
+  @include font(body-l, 400, $font-second);
+  color: $black-clr;
+  letter-spacing: 1.1px;
+  background-color: $general-clr;
+  border-radius: 27px;
+  border: 2px solid transparent;
+  transition: background .3s ease;
+
+  &:hover {
+    background-color: $general-alt-clr;
+  }
+
+  &-alt {
+    background-color: $white-clr;
+    border-color: $general-clr;
+
+    &:hover {
+      background-color: $general-clr;
+    }
+  }
+}

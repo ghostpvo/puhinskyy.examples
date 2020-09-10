@@ -1,0 +1,73 @@
+.general-footer {
+  display: flex;
+  padding-top: 70px;
+  padding-bottom: 53px;
+
+  &-wrap {
+    background-image: url("../../assets/img/footer-bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @include r-max($break-t) {
+    display: block;
+    background-color: rgba(0, 0, 0, .35);
+
+    &-wrap {
+      background-image: url("../../assets/img/first-screen-bg-desctop.jpg");
+      background-position-x: 60%;
+    }
+  }
+}
+
+.footer-group {
+  width: 300px;
+  margin-right: 120px;
+  margin-left: 31px;
+
+  .block-title {
+    padding-bottom: 21px;
+    color: #fff;
+  }
+
+  @include r-max($break-d) {
+    margin-right: 50px;
+    margin-left: 0;
+  }
+
+  @include r-max($break-t) {
+    margin: 25px 0;
+  }
+}
+
+.footer-info-item {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  margin-bottom: 8px;
+
+  .icon {
+    width: 30px;
+    margin-right: 23px;
+
+    &.pin {
+      width: 35px;
+      margin-right: 17px;
+      margin-left: -5px;
+    }
+
+    &.envelope,
+    &.telephone {
+      width: 40px;
+    }
+  }
+}
+
+.footer-address-data {
+  display: block;
+  max-width: 245px;
+  @include font(h-fourth, 400, $font-second);
+  color: $general-clr;
+  letter-spacing: 0.5px;
+}

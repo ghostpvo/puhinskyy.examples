@@ -1,0 +1,29 @@
+.main-offer {
+  padding: 240px 0 268px;
+
+  @include r-max($break-d) {
+    padding: 80px 0;
+  }
+}
+
+.block-intro-text {
+  display: block;
+  max-width: 370px;
+  margin-bottom: 27px;
+  color: $light-grey-clr;
+  @include font(h-first, 400, $font-second);
+  letter-spacing: 2.8px;
+}
+
+.block-description {
+  display: block;
+  max-width: 455px;
+  margin-bottom: 40px;
+  @include font(body);
+  line-height: 1.6;
+  color: $grey-clr;
+}
+
+.main-btn {
+
+}

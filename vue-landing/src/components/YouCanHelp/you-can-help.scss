@@ -1,0 +1,41 @@
+.you-can-help {
+  padding-top: 65px;
+
+  .block-title {
+    text-align: center;
+  }
+}
+
+.help-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 71px;
+}
+
+.help-item {
+  width: 20%;
+  text-align: center;
+  padding-bottom: 78px;
+
+  .icon {
+    height: 58px;
+  }
+
+  @include r-max($break-d) {
+    width: 33%;
+  }
+
+  @include r-max($break-t) {
+    width: 50%;
+  }
+}
+
+.item-text {
+  display: block;
+  padding-top: 18px;
+  text-align: center;
+  @include font(h-fourth, 400, $font-second);
+  letter-spacing: 1px;
+  color: $dark-clr;
+}

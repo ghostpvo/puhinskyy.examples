@@ -1,0 +1,10 @@
+.first-screen {
+  background-image: url(../../assets/img/first-screen-bg-desctop.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include r-max($break-d) {
+    background-position-x: left;
+  }
+}

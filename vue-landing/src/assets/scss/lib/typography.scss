@@ -1,0 +1,74 @@
+// Font families
+$font-general: 'Arial', sans-serif;
+$font-second:  'Georgia', serif;
+$font-third:   'Times New Roman', serif;
+
+// Typography general mixin
+@mixin font($type, $font-weight: null, $font-family: null) {
+  font-size: fontSizeBuild($type, mobile);
+  line-height: lineHeightBuild($type, mobile);
+  @if ($font-family != null) {
+    font-family: $font-family;
+  }
+  @if ($font-weight != null) {
+    font-weight: $font-weight;
+  }
+
+  @include r-min($break-t) {
+    font-size: fontSizeBuild($type, tablet);
+    line-height: lineHeightBuild($type, tablet);
+  }
+
+  @include r-min($break-d) {
+    font-size: fontSizeBuild($type, desktop);
+    line-height: lineHeightBuild($type, desktop);
+  }
+}
+
+// Font size variables
+$font-sizes-map: (
+  h-first:    (mobile: 24px, tablet: 34px, desktop: 44px),
+  h-second:   (mobile: 20px, tablet: 25px, desktop: 35px),
+  h-third:    (mobile: 17px, tablet: 22px, desktop: 32px),
+  h-fourth:   (mobile: 16px, tablet: 18px, desktop: 20px),
+  body-l:     (mobile: 15px, tablet: 15px, desktop: 17px),
+  body:       (mobile: 14px, tablet: 14px, desktop: 15px),
+  body-m:     (mobile: 13px, tablet: 13px, desktop: 13px),
+  body-s:     (mobile: 12px, tablet: 12px, desktop: 12px)
+);
+
+// Get font size
+@function fontSizeBuild($type, $device) {
+  $fontSize: null;
+  $fontSizeMap: map-get($font-sizes-map, $type);
+
+  @if (map-has-key($fontSizeMap, $device)) {
+    $fontSize: map-get($fontSizeMap, $device);
+  }
+
+  @return $fontSize;
+}
+
+// Line height map
+$line-heights-map: (
+  h-first:    (mobile: 1.3, tablet: 1.3, desktop: 1.3),
+  h-second:   (mobile: 1.3, tablet: 1.3, desktop: 1.3),
+  h-third:    (mobile: 1.3, tablet: 1.3, desktop: 1.3),
+  h-fourth:   (mobile: 1.4, tablet: 1.4, desktop: 1.4),
+  body-l:     (mobile: 1.4, tablet: 1.4, desktop: 1.4),
+  body:       (mobile: 1.6, tablet: 1.6, desktop: 1.6),
+  body-m:     (mobile: 1.4, tablet: 1.4, desktop: 1.25),
+  body-s:     (mobile: 1.4, tablet: 1.4, desktop: 1.5)
+);
+
+// Get line height
+@function lineHeightBuild($type, $device) {
+  $lineHeight: null;
+  $lineHeightMap: map-get($line-heights-map, $type);
+
+  @if (map-has-key($lineHeightMap, $device)) {
+    $lineHeight: map-get($lineHeightMap, $device);
+  }
+
+  @return $lineHeight;
+}

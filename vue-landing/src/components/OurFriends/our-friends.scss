@@ -1,0 +1,85 @@
+.our-friends {
+  padding: 71px 0 65px;
+  background-color: $light-grey-clr;
+
+  .block-title {
+    text-align: center;
+  }
+}
+
+.friends-list {
+  padding: 0 106px;
+
+  &-wrap {
+    position: relative;
+  }
+
+  @include r-max(1150px) {
+    padding: 0 40px;
+  }
+
+  @include r-max(450px) {
+    padding: 0;
+  }
+}
+
+.friend-item {
+  padding: 35px 10px;
+  text-align: center;
+  background-color: $white-clr;
+  border-radius: 7px;
+
+  &-wrap {
+    padding: 0 25px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 35px rgba(13, 13, 13, .04);
+  }
+}
+
+.friend-picture {
+  max-width: 100%;
+}
+
+.friend-name {
+  margin: 25px 0 17px;
+  @include font(h-fourth, 400, $font-second);
+  letter-spacing: 1px;
+  color: $dark-clr;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include sq(50px);
+  background-color: transparent;
+  border: 2px solid $general-clr;
+  border-radius: 50%;
+  transition: background-color .3s ease;
+
+  .icon {
+    width: 14px;
+  }
+
+  &-left {
+    left: 0;
+  }
+
+  &-right {
+    right: 0;
+  }
+
+  &:hover {
+    background-color: $general-clr;
+  }
+}
+
+.get-the-rest {
+  display: flex;
+  justify-content: center;
+}

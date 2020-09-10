@@ -1,0 +1,84 @@
+.donation {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 60px;
+  padding-bottom: 80px;
+
+  &-wrap {
+    background-color: $light-grey-clr;
+  }
+
+  @include r-max($break-t) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.donation-picture {
+  max-width: 100%;
+  margin-left: 47px;
+  padding-bottom: 6px;
+
+  @include r-max($break-d) {
+    margin-left: 0;
+  }
+}
+
+.donation-content {
+  width: 385px;
+  margin-left: 62px;
+
+  @include r-max($break-d) {
+    margin-left: 20px;
+  }
+
+  @include r-max($break-t) {
+    margin: 30px auto 0;
+  }
+
+  @include r-min($break-m) {
+    min-width: 320px;
+  }
+
+  @include r-max($break-m) {
+    max-width: 100%;
+  }
+}
+
+.bank-info {
+  display: block;
+  margin-top: 18px;
+  @include font(body, 400, $font-second);
+  color: $dark-clr;
+  letter-spacing: 1.1px;
+}
+
+.bank-card {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-top: 10px;
+  background-color: $general-clr;
+  border-radius: 7px;
+
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    margin-right: 14px;
+  }
+}
+
+.credit-card-number {
+  display: inline-block;
+  vertical-align: middle;
+  @include font(h-fourth, 400, $font-third);
+  letter-spacing: 1.2px;
+  color: $black-clr;
+}
+
+.legal-information {
+  margin-top: 30px;
+  @include font(body-s);
+  font-style: italic;
+  color: $dark-grey-clr;
+}

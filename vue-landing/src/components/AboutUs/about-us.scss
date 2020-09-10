@@ -1,0 +1,53 @@
+.about-us {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 88px;
+  padding-bottom: 88px;
+
+  @include r-max($break-t) {
+    display: block;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.about-us-picture {
+  max-width: 100%;
+  margin-right: 120px;
+
+  @include r-max($break-d) {
+    margin-right: 40px;
+  }
+
+  @include r-max($break-t) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.about-us-description {
+
+}
+
+.description-title {
+  width: 315px;
+  max-width: 100%;
+
+  @include r-max($break-t) {
+    margin: 0 auto;
+  }
+}
+
+.description-text {
+  width: 425px;
+  max-width: 100%;
+  margin-top: 24px;
+  @include font(body);
+  color: $dark-clr;
+
+  @include r-max($break-t) {
+    margin: 0 auto;
+  }
+}
